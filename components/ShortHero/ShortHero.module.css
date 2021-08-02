@@ -34,3 +34,26 @@
     font-family: 'Hind Vadodara', sans-serif;
     font-weight: 300;
 }
+.Btn {
+    z-index: 1;
+
+    background-color: rgba(255, 255, 255, 0);
+    border: white solid 1px;
+    
+    font-size: 17pt;
+    color: white;
+    font-family: 'Hind Vadodara', sans-serif;
+    font-weight: 300;
+
+    padding: 18px 110px;
+    margin-top: 40px;
+
+    transition: border 0.1s ease-in, color 0.1s ease-in, transform 0.1s ease-in;
+}
+
+.Btn:hover {
+    cursor: pointer;
+    color: #4A7EDF;
+    border: #4A7EDF solid 1px;
+    transform: scale(1.02);
+}
