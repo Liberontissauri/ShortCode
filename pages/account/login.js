@@ -7,7 +7,7 @@ import NavBar from "../../components/Navbar/Navbar"
 import {toast, Toaster} from 'react-hot-toast'
 import axios from 'axios'
 
-export default function code_id() {
+export default function Login() {
     const router = useRouter()
     const [keyValue, setKeyValue] = useState("")
 
