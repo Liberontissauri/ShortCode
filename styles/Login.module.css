@@ -29,6 +29,12 @@
     color: white;
     font-family: 'Hind Vadodara', sans-serif;
     font-weight: 300;
+    text-decoration: underline;
+    transition: color 0.1s ease-in;
+}
+.subTitle:hover {
+    cursor: pointer;
+    color: #4A7EDF;
 }
 .formDiv input {
     background-color: rgba(0, 0, 0, 0);
