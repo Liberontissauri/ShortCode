@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 import styles from "../../styles/Login.module.css"
 
@@ -30,7 +31,10 @@ export default function Login() {
             <NavBar></NavBar>
             <div className={styles.formDiv}>
                 <h2 className={styles.title}>Login</h2>
-                <h3 className={styles.subTitle}>Or Sign up</h3>
+                <Link href="/account/signup">
+                    <h3 className={styles.subTitle}>Or Sign up</h3>
+                </Link>
+                
             </div>
             <div className={styles.formDiv}>
                 <input placeholder="API key" onInput={e => setKeyValue(e.target.value)}></input>
