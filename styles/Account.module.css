@@ -1,0 +1,77 @@
+.background {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    min-height: 100vh;
+    width: 100%;
+
+    background-color: #0A0A0A;
+}
+.contentDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 20px 30px;
+    width: 60%;
+}
+.contentDiv button {
+    margin: 15px 0;
+}
+.title {
+    font-size: 45pt;
+    text-align: center;
+    color: white;
+    font-family: 'Hind Vadodara', sans-serif;
+    font-weight: 500;
+    margin-top: 150px;
+}
+.subTitle {
+    font-size: 26pt;
+    text-align: left;
+    color: white;
+    font-family: 'Hind Vadodara', sans-serif;
+    font-weight: 400;
+    margin: 25px 0;
+}
+.list {
+    list-style-type: none;
+}
+.list li {
+    display: flex;
+    flex-direction: row;
+
+    font-size: 16pt;
+    text-align: left;
+    color: rgb(245, 245, 245);
+    font-family: 'Hind Vadodara', sans-serif;
+    font-weight: 300;
+    margin: 10px 10px;
+}
+.list p {
+    margin: 0 10px
+}
+
+.dangerBtn {
+    background-color: rgba(255, 255, 255, 0);
+    border: rgb(194, 53, 53) solid 1px;
+    
+    font-size: 17pt;
+    color: rgb(194, 53, 53);
+    font-family: 'Hind Vadodara', sans-serif;
+    font-weight: 300;
+
+    width: 400px;
+    height: 70px;
+
+    transition: border 0.1s ease-in, color 0.1s ease-in, transform 0.1s ease-in;
+}
+
+.dangerBtn:hover {
+    cursor: pointer;
+    color: #4A7EDF;
+    border: #4A7EDF solid 1px;
+    transform: scale(1.02);
+}
