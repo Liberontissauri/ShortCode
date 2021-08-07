@@ -5,6 +5,8 @@ import styles from "../../styles/Account.module.css"
 import Navbar from '../../components/Navbar/Navbar'
 
 export default function Account() {
+    const storage = window.localStorage
+
     const api_key = useState("kmklkGMGMSdgdsmg,elwml")
     const email = useState("someone.else@gmail.com")
 
@@ -24,4 +26,11 @@ export default function Account() {
             </div>
         </div>
     )
+
+    function logout() {
+        storage.setItem("api_key", "")
+        storage.setItem("email", "")
+        
+        toast.success("Logged out Successfully!")
+    }
 }
