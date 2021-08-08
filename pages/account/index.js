@@ -3,13 +3,19 @@ import React, { useEffect, useState } from 'react'
 import styles from "../../styles/Account.module.css"
 
 import Navbar from '../../components/Navbar/Navbar'
+import { useRouter } from 'next/dist/client/router'
 
 export default function Account() {
 
     const [api_key, setKey] = useState("")
     const [email, setEmail] = useState("")
+    const router = useRouter()
 
     useEffect(() => {
+        const storage = window.localStorage
+        if(!storage.getItem("email") || !storage.getItem("api_key")) {
+            router.push("/account/login")
+        }
         updateKeyAndEmail()
     })
 
