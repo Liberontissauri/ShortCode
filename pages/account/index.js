@@ -1,14 +1,17 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import styles from "../../styles/Account.module.css"
 
 import Navbar from '../../components/Navbar/Navbar'
 
 export default function Account() {
-    const storage = window.localStorage
 
-    const api_key = useState("kmklkGMGMSdgdsmg,elwml")
-    const email = useState("someone.else@gmail.com")
+    const [api_key, setKey] = useState("")
+    const [email, setEmail] = useState("")
+
+    useEffect(() => {
+        updateKeyAndEmail()
+    })
 
     return (
         <div className={styles.background}>
@@ -21,16 +24,20 @@ export default function Account() {
                     <li><p>Email:</p><p>{email}</p></li>
                 </ul>
                 <h2 className={styles.subTitle} style={{color: "#C23535"}}>Dangerous Zone</h2>
-                <button className={styles.dangerBtn}>Logout</button>
+                <button className={styles.dangerBtn} onClick={logout}>Logout</button>
                 <button className={styles.dangerBtn}>DELETE ACCOUNT</button>
             </div>
         </div>
     )
-
+    function updateKeyAndEmail() {
+        const storage = window.localStorage
+        setKey(storage.getItem("api_key"))
+        setEmail(storage.getItem("email"))
+    }
     function logout() {
+        const storage = window.localStorage
         storage.setItem("api_key", "")
         storage.setItem("email", "")
-        
-        toast.success("Logged out Successfully!")
+        updateKeyAndEmail()
     }
 }
