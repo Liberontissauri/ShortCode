@@ -1,4 +1,6 @@
-import React from 'react'
+import {React, useEffect, useState} from 'react'
+
+import CodeLine from '../CodeLine/CodeLine'
 
 import styles from "./CodeContainer.module.css"
 
@@ -7,15 +9,21 @@ function CodeContainer(props) {
         return text.split("\n")
     }
 
-    const [Lines, setLines] = useState(transformToLines(props.code))
+    const [Lines, setLines] = useState([])
+
+    useEffect(() => {
+        setLines(transformToLines(props.text))
+    })
 
     return (
         <div>
-            <h3 className={styles.languageName}></h3>
+            <h3 className={styles.languageName}>{props.language}</h3>
             <div className={styles.container}>
-                {Lines.map((line, index) => {
-                    //return <CodeLine text={line} lineNumber={index}></CodeLine>
-                })}
+                <pre>
+                   <code>
+                        {props.text}
+                    </code> 
+                </pre>
             </div>
         </div>
     )
