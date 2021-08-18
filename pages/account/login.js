@@ -7,6 +7,7 @@ import styles from "../../styles/Login.module.css"
 import NavBar from "../../components/Navbar/Navbar"
 import {toast, Toaster} from 'react-hot-toast'
 import axios from 'axios'
+import ShortButton from '../../components/ShortButton/ShortButton'
 
 export default function Login() {
     const router = useRouter()
@@ -40,7 +41,7 @@ export default function Login() {
                 <input placeholder="API key" onInput={e => setKeyValue(e.target.value)}></input>
             </div>
             <div className={styles.formDiv}>
-                <button className={styles.submitButton} onClick={initLogin}>Login</button>
+                <ShortButton text="Login" onClick={initLogin} size="big" type="normal"></ShortButton>
             </div>
         </div>
     )
