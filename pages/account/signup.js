@@ -6,6 +6,7 @@ import styles from "../../styles/Login.module.css"
 import NavBar from "../../components/Navbar/Navbar"
 import {toast, Toaster} from 'react-hot-toast'
 import axios from 'axios'
+import ShortButton from '../../components/ShortButton/ShortButton'
 
 export default function Signup() {
     const [emailValue, setEmailValue] = useState("")
@@ -38,7 +39,7 @@ export default function Signup() {
                 <input placeholder="Email" onInput={e => setEmailValue(e.target.value)}></input>
             </div>
             <div className={styles.formDiv}>
-                <button className={styles.submitButton} onClick={initSignUp}>Sign Up</button>
+                <ShortButton text="Sign Up" onClick={initSignUp} size="big" type="normal"></ShortButton>
             </div>
         </div>
     )
