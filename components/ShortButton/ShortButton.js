@@ -23,7 +23,7 @@ function ShortButton(props) {
     
     return (
         <div>
-            <button className={`${styles.buttonBase} ${getSizeStyle(styles, props.size)} ${getTypeStyle(styles, props.type)}`}>{props.text}</button>
+            <button onClick={props.onClick} className={`${styles.buttonBase} ${getSizeStyle(styles, props.size)} ${getTypeStyle(styles, props.type)}`}>{props.text}</button>
         </div>
     )
 }
