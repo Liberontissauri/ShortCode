@@ -1,0 +1,41 @@
+.buttonBase {
+    z-index: 1;
+    position: relative;
+
+    background-color: rgba(255, 255, 255, 0);
+    border: white solid 1px;
+    
+    font-size: 16pt;
+    color: white;
+    font-family: 'Hind Vadodara', sans-serif;
+    font-weight: 300;
+
+    padding: 15px 80px;
+    margin-top: 40px;
+
+    transition: border 0.1s ease-in, color 0.1s ease-in, transform 0.1s ease-in;
+}
+
+.buttonBase:hover {
+    cursor: pointer;
+    color: #4A7EDF;
+    border: #4A7EDF solid 1px;
+    transform: scale(1.02);
+}
+
+.smallSize {
+    font-size: 15pt;
+    padding: 12px 50px;
+}
+.bigSize {
+    font-size: 17pt;
+    padding: 18px 110px;
+}
+
+.dangerType {
+    background-color: rgba(255, 255, 255, 0);
+    border: rgb(194, 53, 53) solid 1px;
+    
+    color: rgb(194, 53, 53);
+    font-family: 'Hind Vadodara', sans-serif;
+}
