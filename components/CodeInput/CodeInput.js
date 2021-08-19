@@ -3,6 +3,7 @@ import {React, useEffect, useState} from 'react'
 import router from 'next/router'
 
 import styles from "./CodeInput.module.css"
+import ShortButton from '../ShortButton/ShortButton'
 
 function CodeContainer(props) {
     const [Title, setTitle] = useState("")
@@ -23,7 +24,7 @@ function CodeContainer(props) {
             <textarea placeholder="Code" type="text" className={styles.container} spellCheck="false"  onChange={(e) => setCode(e.target.value)}>
                 
             </textarea>
-            <button className={styles.Btn} onClick={createPost}>Submit Post</button>
+            <ShortButton text="Submit Post" onClick={createPost} size="big" type="normal"></ShortButton>
         </div>
     )
     async function createPost() {
